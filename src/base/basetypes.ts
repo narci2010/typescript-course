@@ -104,7 +104,8 @@ I'll be ${age + 1} years old next month.`
   // 声明一个void类型的变量没有什么大用，因为你只能为它赋予undefined和null：
   let unusable: void = undefined
   log(unusable)
-  unusable = null
+  // 不能将类型“null”分配给类型“void”。
+  //   unusable = null
   log(unusable)
 
   //   9、Null 和 Undefined

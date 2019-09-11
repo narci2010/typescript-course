@@ -9,6 +9,10 @@
     "sourceMap": false, //把 ts 文件编译成 js 文件的时候，同时生成对应的 map 文件
     "removeComments": true, //编译 js 的时候，删除掉注释
     "declaration": false, //生成相应的.d.ts文件。
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "jsx": "preserve",
     // "moduleResolution": "node", //模块的解析
     "emitDecoratorMetadata": true, //给源码里的装饰器声明加上设计类型元数据。
     "experimentalDecorators": true, //启用实验性的ES装饰器。
@@ -17,6 +21,7 @@
     "typeRoots": ["node_modules/@types"], //要包含的类型声明文件路径列表。
     "lib": [
       //添加需要的解析的语法，否则TS会检测出错。
+      "es2015",
       "es2016",
       //"dom"
       "es2017"

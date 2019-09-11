@@ -11,7 +11,8 @@ export default function variants() {
     if (shouldInitialize) {
       var x = 10
     }
-
+    //在赋值前使用了变量“x”
+    x = 100
     return x
   }
   log(f(true)) // returns '10'
