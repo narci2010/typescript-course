@@ -35,7 +35,17 @@
 // import '@/pattern/Interpreter'
 // import '@/pattern/Bridge'
 
-import '@/advance/strange'
+// import '@/advance/strange'
+// import '@/advance/strange2'
+// import '@/advance/strange3'
+// import '@/advance/reflectmetadata'
+
+//diagrams
+// import init from '@/diagrams/go/index'
+// import draws from '@/diagrams/echarts/index'
+
+//excel
+import drawExcel from '@/excel/handsontable/index'
 
 // const { log } = console
 // let greeter = new Greeter('world')
@@ -56,3 +66,10 @@ import '@/advance/strange'
 // declaremerge()
 // decrorators()
 // decrorator2()
+
+//diagrams
+// init()
+// draws()
+
+//excel
+drawExcel()

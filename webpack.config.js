@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
@@ -54,6 +55,15 @@ module.exports = {
       },
       filename: 'index.html',
       template: 'index.html'
+    }),
+    new webpack.LoaderOptionsPlugin({
+      // test: /\.xxx$/, // may apply this only for some modules
+      options: {
+        alias: {
+          // '@': path.resolve(__dirname, 'src/'),
+          '~': path.resolve(__dirname, 'node_modules/')
+        }
+      }
     })
   ]
 }

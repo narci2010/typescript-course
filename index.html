@@ -11,5 +11,15 @@
       <p>Name: <input type="text" id="name" name="name" /></p>
       <p>Age: <input type="text" id="age" name="age" /></p>
     </div>
+    <!-- The DIV for a Diagram needs an explicit size or else we will not see anything.
+     In this case we also add a background color so we can see that area. -->
+    <div
+      id="myDiagramDiv"
+      style="width:400px; height:150px; background-color: #DAE4E4;"
+    ></div>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <!--excel-->
+    <div id="example"></div>
   </body>
 </html>

@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "./dist", // 写不写都行
-    "module": "es6", // 用 es6 模块引入 import
-    "target": "es5", // 打包成 es5 ES2015
+    "module": "esnext", // 用 es6 模块引入 import
+    "target": "esnext", // 打包成 es5 ES2015
     "allowJs": true, // 允许在 ts 中也能引入 js 的文件
     "sourceMap": false, //把 ts 文件编译成 js 文件的时候，同时生成对应的 map 文件
     "removeComments": true, //编译 js 的时候，删除掉注释
@@ -12,8 +12,10 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "downlevelIteration": true,
+    "esModuleInterop": true, //es模块导入语法
+    "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    // "moduleResolution": "node", //模块的解析
+    "moduleResolution": "node", //模块的解析
     "emitDecoratorMetadata": true, //给源码里的装饰器声明加上设计类型元数据。
     "experimentalDecorators": true, //启用实验性的ES装饰器。
     //exclude：不包含的编译目录
@@ -23,11 +25,14 @@
       //添加需要的解析的语法，否则TS会检测出错。
       "es2015",
       "es2016",
-      //"dom"
+      "es2015.reflect",
+      "dom", //注释掉会报错：cannot find name window or document
       "es2017"
     ],
+    //     "types": ["webpack-env"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "~/*": ["node_modules/*"]
     }
   },
   "include": [
@@ -36,6 +41,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
+    //"src/diagrams/go/go.js"
   ],
   "exclude": ["node_modules"]
 }
