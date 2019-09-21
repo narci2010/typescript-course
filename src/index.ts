@@ -45,7 +45,8 @@
 // import draws from '@/diagrams/echarts/index'
 
 //excel
-import drawExcel from '@/excel/handsontable/index'
+// import drawExcel from '@/excel/handsontable/index'
+import '@/excel/spreadjs/index'
 
 // const { log } = console
 // let greeter = new Greeter('world')
@@ -72,4 +73,4 @@ import drawExcel from '@/excel/handsontable/index'
 // draws()
 
 //excel
-drawExcel()
+// drawExcel()

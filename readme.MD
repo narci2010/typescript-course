@@ -17,3 +17,7 @@ npm i style-loader css-loader -D
 在 lodash 安装的前提下再增加安装@types 的 npm modules 即可
 
 npm install --save @types/lodash
+
+npm i handsontable -S
+
+npm install @grapecity/spread-sheets

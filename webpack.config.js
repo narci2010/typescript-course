@@ -54,7 +54,8 @@ module.exports = {
         minifyCSS: true // 压缩内联css
       },
       filename: 'index.html',
-      template: 'index.html'
+      // template: 'index.html'
+      template: 'index.spreadjs.html'
     }),
     new webpack.LoaderOptionsPlugin({
       // test: /\.xxx$/, // may apply this only for some modules
